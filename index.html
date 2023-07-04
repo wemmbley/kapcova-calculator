@@ -237,23 +237,27 @@
         $('#env-expensive').text(envelope);
         free += envelope;
 
-        envelope = round(envelope - percentage(envelope, 10));
+        envelope = round(percentage(invoice - free, 10));
         $('#env-freedom').text(envelope);
         free += envelope;
 
-        envelope = round(envelope - percentage(envelope, 10));
+        envelope = round(percentage(invoice - free, 10));
+        console.log(envelope)
         $('#env-chill').text(envelope);
         free += envelope;
 
-        envelope = round(envelope - percentage(envelope, 10));
+        envelope = round(percentage(invoice - free, 10));
+        console.log(envelope)
         $('#env-invest').text(envelope);
         free += envelope;
 
-        envelope = round(envelope - percentage(envelope, 10));
+        envelope = round(percentage(invoice - free, 10));
+        console.log(envelope)
         $('#env-taxes').text(envelope);
         free += envelope;
 
-        envelope = round(envelope - percentage(envelope, 10));
+        envelope = round(percentage(invoice - free, 10));
+        console.log(envelope)
         $('#env-bounty').text(envelope);
         free += envelope;
         free = invoice - free;
